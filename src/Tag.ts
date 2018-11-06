@@ -5,6 +5,8 @@ namespace WebMachine {
         private components: Component[] = [];
         public el: HTMLDivElement;
 
+        public transform: Transform = new Transform();
+
         constructor(comps: Component[]) {
             this.el = document.createElement("div");
             this.el.style.position = "absolute";

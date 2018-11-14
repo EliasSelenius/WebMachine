@@ -1,26 +1,27 @@
 
-
 namespace WebMachine {
-    export class Transform {
+    export class RectTransform {
 
+        public PixelPos: Nums.Vec3 = new Nums.Vec3();
 
         // Transformations:
 
-        Move(): Transform {
+        Move(vec: Nums.Vec3): RectTransform {
+            this.PixelPos.addeq(vec);
             return this;
         }
-        Rotate(): Transform {
+        Rotate(): RectTransform {
             return this;
         }
-        Scale(): Transform {
-            return this;
-        }
-
-        LookAt(): Transform {
+        Scale(): RectTransform {
             return this;
         }
 
-        RotateAround(): Transform {
+        LookAt(): RectTransform {
+            return this;
+        }
+
+        RotateAround(): RectTransform {
             return this;
         }
     }

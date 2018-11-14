@@ -5,11 +5,12 @@ namespace WebMachine {
         private components: Component[] = [];
         public el: HTMLDivElement;
 
-        public transform: Transform = new Transform();
+        public transform: RectTransform = new RectTransform();
 
         constructor(comps: Component[]) {
             this.el = document.createElement("div");
             this.el.style.position = "absolute";
+            comps.forEach(x => { this.AddComponents(x); });
         }
 
         AddComponents(...comps: Component[]): Tag {

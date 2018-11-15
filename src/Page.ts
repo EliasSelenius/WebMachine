@@ -4,6 +4,10 @@ namespace WebMachine {
         private tags: Tag[] = [];
 
 
+        constructor() {
+
+        }
+
         public New(...comps: Component[]): Tag {
             let t: Tag = new Tag(comps);
             this.Add(t);
